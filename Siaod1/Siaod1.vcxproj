@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="dyn_arr.cpp" />
-    <ClCompile Include="Siaod1.cpp" />
+    <ClCompile Include="dynamic_arr.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="static_arr.cpp" />
+    <ClCompile Include="vector_arr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamic.h" />
-    <ClInclude Include="static.h" />
+    <ClInclude Include="header.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -10,11 +10,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string>
-#include "static.h"
-#include "dynamic.h"
-#include "vector.h"
+#include "header.h"
 using namespace std;
-
 
 
 int main()
