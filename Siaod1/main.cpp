@@ -80,7 +80,6 @@ int main() {
     int fact_len = 0;
 
     int len_dyn=1;    //dynamic
-    int* data_dyn = new int[len_dyn]();
 
     vector<int> data_v; //vector
 
@@ -148,7 +147,6 @@ int main() {
             break;
         }
         case 4: {
-            delete[] data_dyn;
             cout << "Введите длину желаемого динамического массива: \n";
             cin >> len_dyn;
             len_dyn++;
@@ -163,7 +161,6 @@ int main() {
             break;
         }
         case 5: {
-            delete[] data_dyn;
             cout << "Введите длину желаемого динамического массива: \n";
             cin >> len_dyn;
             len_dyn++;
@@ -180,7 +177,6 @@ int main() {
             break;
         }
         case 6: {
-            delete[] data_dyn;
             cout << "Введите длину желаемого динамического массива: \n";
             cin >> len_dyn;
             len_dyn++;
