@@ -12,12 +12,10 @@ int rrand(int range_min, int range_max);
 void fill(int* arr, int len);
 void printArr(int* arr, int len);
 bool checkElement(int x);
-void first_static(int* data);
+void first_static(int* data, int fact_len);
 //задача 2
 int findMaxIndex(int* arr, int len);
-
 void insert(int* arr, int len, int a, int pos);
-
 void second_static(int* arr, int len);
 
 //задача 3

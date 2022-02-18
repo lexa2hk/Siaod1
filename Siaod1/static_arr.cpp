@@ -10,16 +10,18 @@ using namespace std;
 int rrand(int range_min, int range_max) {
     return rand() % (range_max - range_min + 1) + range_min;
 }
+
 void fill(int* arr, int len) {
+    
     cout << "Filling array: 0 - manual,1-randomly(0-1000)\n";
-    char inp;
+    int inp;
     cin >> inp;
-    if (inp == '0') {
+    if (inp == 0) {
         for (int i = 0; i < len; i++) {
             cin >> arr[i];
         }
     }
-    else if (inp == '1') {
+    else if (inp == 1) {
         for (int i = 0; i < len; i++) {
             arr[i] = rrand(0, 1000);
         }
@@ -49,8 +51,8 @@ bool checkElement(int x) {
         return false;
     }
 }
-void first_static(int* data) {
-    for (int i = 0; i < 100; i++) {
+void first_static(int* data, int fact_len) {
+    for (int i = 0; i < fact_len; i++) {
         if (checkElement(data[i])) {
             cout << "Index of first 'good' element: " << i << endl;
             return;
@@ -59,7 +61,7 @@ void first_static(int* data) {
 }
 //задача 2
 int findMaxIndex(int* arr, int len) {
-    int globalMax = 0, maxIndex;
+    int globalMax = 0, maxIndex=0;
     for (int i = 0; i < len; i++) {
         if (arr[i] > globalMax) {
             globalMax = arr[i];
@@ -74,6 +76,7 @@ void insert(int* arr, int len, int a, int pos) {
     for (int i = pos; i < len; i++) {
         swap(temp, arr[i]);
     }
+    arr[len] = temp;
 }
 
 void second_static(int* arr, int len) {

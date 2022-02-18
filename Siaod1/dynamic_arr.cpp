@@ -12,14 +12,14 @@ int rrand_dynamic(int range_min, int range_max) {
 
 void fill_dynamic(int* arr, int len) {
     cout << "Filling array: 0 - manual,1-randomly(0-1000)\n";
-    char inp;
+    int inp;
     cin >> inp;
-    if (inp == '0') {
+    if (inp == 0) {
         for (int i = 0; i < len; i++) {
             cin >> arr[i];
         }
     }
-    else if (inp == '1') {
+    else if (inp == 1) {
         for (int i = 0; i < len; i++) {
             arr[i] = rrand_dynamic(0, 1000);
         }
@@ -59,7 +59,7 @@ void first_dynamic(int* data, int len) {
 }
 //задача 2
 int findMaxIndex_dynamic(int* arr, int len) {
-    int globalMax = 0, maxIndex;
+    int globalMax = 0, maxIndex=0;
     for (int i = 0; i < len; i++) {
         if (arr[i] > globalMax) {
             globalMax = arr[i];
@@ -74,6 +74,7 @@ void insert_dynamic(int* arr, int len, int a, int pos) {
     for (int i = pos; i < len; i++) {
         swap(temp, arr[i]);
     }
+    arr[len] = temp;
 }
 
 void second_dynamic(int* arr, int len) {

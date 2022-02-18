@@ -67,7 +67,7 @@ void first_v(vector<int> data_v) {
 
 //2
 int findMaxIndex_v(vector<int> data_v) {
-	int globalMax = 0, maxIndex;
+	int globalMax = 0, maxIndex=0;
 	for (int i = 0; i < data_v.size(); i++) {
 		if (data_v[i] > globalMax) {
 			globalMax = data_v[i];
