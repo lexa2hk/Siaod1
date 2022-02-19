@@ -14,63 +14,6 @@
 using namespace std;
 
 
-/*int main()
-{
-    setlocale(LC_ALL, "rus");
-    srand(time(NULL));
-
-    //через статический массив
-    int data[100];
-    int fact_len=0;
-    cout << "Type n (1<n<100):\n";
-    cin >> fact_len;
-    fill(data, 100);
-    printArr(data, fact_len);
-    first_static(data,fact_len);
-    printArr(data, fact_len);
-    second_static(data, fact_len);
-    fact_len++;
-    printArr(data, fact_len);
-    third_static(data, fact_len);
-    fact_len--;
-    printArr(data, fact_len);
-
-    //через динамический массив
-    int len_dyn;
-    cout << "Введите длину желаемого динамического массива: \n";
-    cin >> len_dyn;
-    len_dyn++;
-    int* data_dyn = new int[len_dyn];
-    len_dyn--;
-    fill_dynamic(data_dyn,len_dyn);
-    printArr_dynamic(data_dyn, len_dyn);
-    first_dynamic(data_dyn,len_dyn);
-    second_dynamic(data_dyn, len_dyn);
-    len_dyn++;
-    printArr_dynamic(data_dyn, len_dyn);
-    third_dynamic(data_dyn, len_dyn);
-    len_dyn--;
-    printArr_dynamic(data_dyn, len_dyn);
-
-    //вектор
-    vector<int> data_v;
-    fill_v(data_v);
-    print_v(data_v);
-
-    first_v(data_v);
-    //second_v(data_v);
-    second_v(data_v);
-    print_v(data_v);
-
-    third_v(data_v);
-    print_v(data_v);
-
-
-
-
-    return 0;
-}*/
-
 int main() {
     setlocale(LC_ALL, "rus");
     srand(time(NULL));
