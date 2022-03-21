@@ -69,7 +69,17 @@ int findMaxIndex_dynamic(int* arr, int len) {
     return maxIndex;
 }
 
-void insert_dynamic(int* arr, int len, int a, int pos) {
+void insert_dynamic(int* &arr, int& len, int a, int pos) {
+    len++;
+    int* arr1 = new int[len];
+
+    for (int i = 0; i < len-1; i++) {
+        arr1[i] = arr[i];
+    }
+    arr = arr1;
+
+    delete[] arr1;
+
     int temp = a;
     for (int i = pos; i < len; i++) {
         swap(temp, arr[i]);
@@ -77,20 +87,26 @@ void insert_dynamic(int* arr, int len, int a, int pos) {
     arr[len] = temp;
 }
 
-void second_dynamic(int* arr, int len) {
+void second_dynamic(int* &arr, int &len) {
     int ind = findMaxIndex_dynamic(arr, len);
     cout << "Inserting 1321 before max element with index " << ind << endl;
     insert_dynamic(arr, len, 1321, ind);
 }
 
 //задача 3
-void deleteElement_dynamic(int* arr, int len, int delIndex) {
-    for (int i = delIndex; i < len - 1; i++) {
+void deleteElement_dynamic(int* &arr, int &len, int delIndex) {
+    len--;
+    int* arr1 = new int[len];
+    for (int i = delIndex; i < len; i++) {
         arr[i] = arr[i + 1];
     }
+    for (int i = 0; i < len; i++) {
+        arr1[i] = arr[i];
+    }
+    arr = arr1;
 }
 
-void third_dynamic(int* arr, int len) {
+void third_dynamic(int* &arr, int &len) {
     for (int i = 0; i < len; i++) {
         if (checkElement_dynamic(arr[i])) {
             cout << "Deleting element with index " << i << endl;

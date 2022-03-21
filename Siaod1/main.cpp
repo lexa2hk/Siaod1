@@ -92,9 +92,7 @@ int main() {
         case 4: {
             cout << "Введите длину желаемого динамического массива: \n";
             cin >> len_dyn;
-            len_dyn++;
             int* data_dyn = new int[len_dyn];
-            len_dyn--;
             fill_dynamic(data_dyn, len_dyn);
             cout << "Your array:\n";
             printArr_dynamic(data_dyn, len_dyn);
@@ -106,15 +104,14 @@ int main() {
         case 5: {
             cout << "Введите длину желаемого динамического массива: \n";
             cin >> len_dyn;
-            len_dyn++;
             int* data_dyn = new int[len_dyn];
-            len_dyn--;
+
             fill_dynamic(data_dyn, len_dyn);
             cout << "Your array:\n";
             printArr_dynamic(data_dyn, len_dyn);
             second_dynamic(data_dyn, len_dyn);
             cout << "Modified array:\n";
-            printArr_dynamic(data_dyn, len_dyn+1);
+            printArr_dynamic(data_dyn, len_dyn);
 
             system("pause");
             break;
@@ -122,15 +119,13 @@ int main() {
         case 6: {
             cout << "Введите длину желаемого динамического массива: \n";
             cin >> len_dyn;
-            len_dyn++;
             int* data_dyn = new int[len_dyn];
-            len_dyn--;
             fill_dynamic(data_dyn, len_dyn);
             cout << "Your array:\n";
             printArr_dynamic(data_dyn, len_dyn);
             third_dynamic(data_dyn, len_dyn);
             cout << "Modified array:\n";
-            printArr_dynamic(data_dyn, len_dyn-1);
+            printArr_dynamic(data_dyn, len_dyn);
 
             system("pause");
             break;

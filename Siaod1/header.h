@@ -33,13 +33,13 @@ bool checkElement_dynamic(int x);
 void first_dynamic(int* data, int len);
 //задача 2
 int findMaxIndex_dynamic(int* arr, int len);
-void insert_dynamic(int* arr, int len, int a, int pos);
-void second_dynamic(int* arr, int len);
+void insert_dynamic(int* &arr, int &len, int a, int pos);
+void second_dynamic(int* &arr, int &len);
 
 //задача 3
-void deleteElement_dynamic(int* arr, int len, int delIndex);
+void deleteElement_dynamic(int* &arr, int &len, int delIndex);
 
-void third_dynamic(int* arr, int len);
+void third_dynamic(int* &arr, int &len);
 
 
 //vector
